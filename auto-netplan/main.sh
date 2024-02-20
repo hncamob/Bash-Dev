@@ -15,6 +15,16 @@ else
   echo "Se ha ingresado un valor no valido"
   exit 1
 
+
+
+case $? in
+  0)
+    echo "Codigo ejecutado correctamente"
+  1)
+    echo "Error de codigo por ingreso de valores"
+  2)
+    echo "Error de codigo por salida desconocida"
+esac
 #Salidas de codigo:
 # exit 0 == salida exitosa
 # exit 1 == salida por error de valores
