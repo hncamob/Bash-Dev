@@ -29,28 +29,6 @@ else
   exit 2
 fi
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 case $? in
   0)
     echo "Codigo ejecutado correctamente"
