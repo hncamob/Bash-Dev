@@ -2,6 +2,21 @@
 
 #Programa de configuracion automatica/manual del fichero /etc/netplan/01-network-manager-all.yml (Netplan)
 
+#Opcion de ingreso de valores por vairables
+#Si el primer parametro ingresado tras la llamada es el siguiente, mostrar ayuda del programa
+if [[ $1 == "-h" || $1 == "--help" ]]; then
+  echo "Ayuda de $0:"
+#Si el primer parametro ingresado tras la llamada es el siguiente, mostrar opciones disponibles
+elif [[ $1 == "-o" || $1 == "--options"]]; then
+  echo "Listado de opciones disponibles:"
+#Si el primer parametro ingresado tras la llamada es el siguiente, mostrar infromacion del repositorio alojado en GitHub
+elif [[ $1 == "-g" || $1 == "--git" ]]; then
+  echo "Repositorio publico:"
+#Si se ingresa un parametro diferente o ninguno, se indica y continua el codigo
+else
+  echo "No se ha ingresado un valor por variables"
+fi
+
 #Rececpión de valores mediante preguntas
 #Establecimiento de condicionales - modo de configuracion automatico/manual - El valor es guardado en la variable mode
 read -p "Elija el modo de aplicacion de configuracion de red (automatica [aut] / manual [man]): " mode
