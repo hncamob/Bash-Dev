@@ -1,5 +1,5 @@
 #!/bin/bash
-#Programa de inicio de sesion 
+#Programa de inicio de sesion ::
 
 #Limpieza de consola
 echo "Iniciando sistema de login..."
@@ -43,19 +43,6 @@ min_try=0
             $intent=$(($intent - 1))
         done
     fi
-else [[ $input -eq "--h" || $input -eq "--help" ]]; then
-    echo "Soporte del programa:"
-    echo "Este programa es un boceto NO FUNCIONAL, creado para servir de ejemplo y practica"
-    echo "Su uso es libre y no requiere de dependencias externas"
-    echo ""
-    echo "Funcionamiento:"
-    echo "      Inicio del programa:"
-    echo "          Ejecutar el programa: 'bash $0'"
-    echo "      Opciones (registro, login, soporte)"
-    echo "          login >> Esta opcion utiliza las credenciales guardadas para acceder al programa"
-    echo "          register >> Esta opcion permite registrar al usuario dentro del programa"
-    echo "          -h || --help >> Esta opcion muestra el dialogo actual, sirve como guia ante cualquier duda"
-    echo ""
-    echo ""
-    echo "Muchas gracias por usar el programa"
+else
+    echo "Ingreso de valores no validos"
 fi
