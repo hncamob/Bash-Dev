@@ -13,7 +13,7 @@ if [[ $input == "login" ]]; then
     read -p "Ingrese su nombre de usuario: " username
     read -s -p "Ingrese su clave de acceso: " passwd
 #Mientras que las credenciales sean validas, continuar el programa
-    while [[ ]]
+    while [[ ]]; do
 #llamada al programa
     done
 
@@ -24,8 +24,10 @@ elif [[ $input == "register"]]; then
 #Si deja el campo vaciio
 elif [[ $input == "" ]];
     echo "No puedes dejar el campo vacio"
+    exit 1
 else
     echo "Accion no reconocible, saliendo del programa"
+    exit 1
 #Final de programa
 fi
 
