@@ -6,6 +6,7 @@
 #Si el primer parametro ingresado tras la llamada es el siguiente, mostrar ayuda del programa
 if [[ $1 == "-h" || $1 == "--help" ]]; then
   echo "Ayuda de $0:"
+  cat /media/help.md
 #Si el primer parametro ingresado tras la llamada es el siguiente, mostrar opciones disponibles
 elif [[ $1 == "-o" || $1 == "--options"]]; then
   echo "Listado de opciones disponibles:"
